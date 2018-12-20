@@ -15,6 +15,14 @@ import RxSwift
 import RxCocoa
 #endif
 
+// Taken from RxCococa until marked as public
+func castOrThrow<T>(_ resultType: T.Type, _ object: Any) throws -> T {
+    guard let returnValue = object as? T else {
+        throw RxCocoaError.castingError(object: object, targetType: resultType)
+    }
+    return returnValue
+}
+
 extension Reactive where Base: GADAdLoader {
 
     public typealias AdLoaderWithError = (adLoader: GADAdLoader, error: Error)
