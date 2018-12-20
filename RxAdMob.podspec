@@ -25,8 +25,8 @@ Pod::Spec.new do |spec|
   spec.static_framework = true
 
   spec.frameworks = 'Foundation'
-  spec.dependency "RxSwift", "~> 4.3"
-  spec.dependency "RxCocoa", "~> 4.3"
+  spec.dependency "RxSwift"
+  spec.dependency "RxCocoa"
   spec.dependency "Firebase/AdMob"
 
 end
